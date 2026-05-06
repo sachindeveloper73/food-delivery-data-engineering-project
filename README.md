@@ -1,13 +1,13 @@
-# 🚀 FAANG-Level Data Engineering Project
+# 🚀 Food Delivery Data Engineering Pipeline
 
 ## 📌 Overview
-This project implements an end-to-end data pipeline using PySpark and Delta Lake with Medallion Architecture.
+End-to-end data pipeline using PySpark, Delta Lake, and Airflow.
 
 ## 🏗️ Architecture
-- Bronze Layer: Raw data ingestion
-- Silver Layer: Data cleaning and transformation
-- Gold Layer: Data modeling (Fact & Dimension tables)
-- SCD Type 2: Historical tracking of customer changes
+- Bronze → Raw ingestion
+- Silver → Data cleaning
+- Gold → Fact & Dimension tables
+- SCD Type 2 → Historical tracking
 
 ## ⚙️ Tech Stack
 - PySpark
@@ -15,15 +15,18 @@ This project implements an end-to-end data pipeline using PySpark and Delta Lake
 - Apache Airflow
 - Streamlit
 
-## 📊 Features
-- Incremental data processing
-- Slowly Changing Dimensions (Type 2)
-- Star schema data modeling
-- Automated workflows using Airflow
-- Interactive dashboard
+## 📂 Data Setup
+Place CSV files in:
+data/raw/
+
+Files:
+- customers.csv
+- orders.csv
+- products.csv
 
 ## 🚀 How to Run
 
+```bash
 pip install -r requirements.txt
 
 python pyspark/bronze_layer.py
@@ -32,8 +35,3 @@ python pyspark/scd_type2.py
 python pyspark/gold_layer.py
 
 streamlit run dashboard/app.py
-
-## 🎯 Future Improvements
-- Kafka streaming
-- Cloud deployment (AWS/GCP)
-- Partitioning optimization
