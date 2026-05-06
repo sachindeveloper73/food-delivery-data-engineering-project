@@ -1,0 +1,8 @@
+bronze/
+silver/
+gold/
+delta/
+__pycache__/
+*.pyc
+.env
+airflow/logs/
