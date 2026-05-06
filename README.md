@@ -1,13 +1,10 @@
 # 🚀 Food Delivery Data Engineering Pipeline
 
 ## 📌 Overview
-End-to-end data pipeline using PySpark, Delta Lake, and Airflow.
+End-to-end data pipeline using PySpark, Delta Lake, and Airflow with Medallion Architecture.
 
 ## 🏗️ Architecture
-- Bronze → Raw ingestion
-- Silver → Data cleaning
-- Gold → Fact & Dimension tables
-- SCD Type 2 → Historical tracking
+Bronze → Silver → SCD → Gold → Dashboard
 
 ## ⚙️ Tech Stack
 - PySpark
@@ -16,10 +13,11 @@ End-to-end data pipeline using PySpark, Delta Lake, and Airflow.
 - Streamlit
 
 ## 📂 Data Setup
-Place CSV files in:
+Place CSV files inside:
+
 data/raw/
 
-Files:
+Required files:
 - customers.csv
 - orders.csv
 - products.csv
