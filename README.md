@@ -5,6 +5,10 @@ End-to-end data pipeline using PySpark, Delta Lake, and Airflow with Medallion A
 
 ## 🏗️ Architecture
 Bronze → Silver → SCD → Gold → Dashboard
+## 🏗️ Architecture Diagram
+
+![Architecture](Architecturediagram.png)
+
 
 ## ⚙️ Tech Stack
 - PySpark
